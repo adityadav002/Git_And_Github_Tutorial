@@ -1,39 +1,240 @@
-************\************* git tutorial ********************\*********************
+# 🧠 Complete Git & GitHub Tutorial
 
-git init
+---
 
-git status
+# ****\*\*\*\*****\*****\*\*\*\***** GIT TUTORIAL ********\*\*\*\*********\*********\*\*\*\*********
 
-git add "file_name" or "."
+## 🔹 Repository Setup
 
-git commit -m "message"
+git init  
+→ Initialize a new git repository
 
-git log, git log --oneline
+git status  
+→ Check current repository status
 
-git restore , gir restore --stagged 'file_name'
+git add "file_name"  
+git add .  
+→ Stage specific file or all files
 
-git diff
+git commit -m "message"  
+→ Create a commit
 
-git commit --amend -m 'new commit message'
+git log  
+git log --oneline  
+git log --graph --oneline --all  
+→ View commit history
 
-git reset --soft HEAD~1
+---
 
-git reset --hard HEAD~1
+## 🔹 Undo & Restore
 
-git branch
+git restore file_name  
+→ Discard changes in working directory
 
-git switch branch_name
+git restore --staged file_name  
+→ Unstage file
 
-git switch -c branch_name
+git commit --amend -m "new message"  
+→ Change last commit message
 
-git branch -d branch_name
+git reset --soft HEAD~1  
+→ Undo commit, keep changes staged
 
-git merge branch_name
+git reset --mixed HEAD~1  
+→ Undo commit, keep changes unstaged
 
-git branch -m new_branch_name
+git reset --hard HEAD~1  
+→ Delete commit and changes permanently
 
-git branch -m old_name new_name
+---
 
-git branch --merged
+## 🔹 Branching
 
-git branch --no-merged
+git branch  
+→ List branches
+
+git switch branch_name  
+→ Switch branch
+
+git switch -c branch_name  
+→ Create and switch branch
+
+git branch -d branch_name  
+→ Delete branch
+
+git branch -m new_name  
+→ Rename current branch
+
+git branch -m old_name new_name  
+→ Rename specific branch
+
+git branch --merged  
+→ Show merged branches
+
+git branch --no-merged  
+→ Show unmerged branches
+
+---
+
+## 🔹 Merging
+
+git merge branch_name  
+→ Merge branch into current branch
+
+---
+
+## 🔹 Rebase (Clean History)
+
+git rebase branch_name  
+→ Move current branch commits on top of another branch
+
+git rebase -i HEAD~3  
+→ Interactive rebase (edit/squash/reorder commits)
+
+git rebase --abort  
+→ Cancel rebase
+
+git rebase --continue  
+→ Continue rebase after conflict
+
+---
+
+## 🔹 Stash (Temporary Save)
+
+git stash  
+→ Save uncommitted changes
+
+git stash push -m "message"  
+→ Save with message
+
+git stash list  
+→ Show stash list
+
+git stash apply  
+→ Apply last stash
+
+git stash pop  
+→ Apply and remove stash
+
+git stash drop  
+→ Delete stash
+
+git stash clear  
+→ Delete all stashes
+
+---
+
+## 🔹 Viewing Changes
+
+git diff  
+→ Show unstaged changes
+
+git diff --staged  
+→ Show staged changes
+
+git show commit_id  
+→ Show details of specific commit
+
+---
+
+## 🔹 Tagging
+
+git tag  
+→ List tags
+
+git tag v1.0  
+→ Create tag
+
+git tag -a v1.0 -m "version 1.0"  
+→ Create annotated tag
+
+git push origin v1.0  
+→ Push tag to remote
+
+git push origin --tags  
+→ Push all tags
+
+---
+
+## 🔹 Remote Management
+
+git remote add origin repo_url  
+→ Add remote repository
+
+git remote -v  
+→ View remote URLs
+
+git remote set-url origin new_url  
+→ Change remote URL
+
+git remote remove origin  
+→ Remove remote
+
+---
+
+# ****\*\*\*\*****\*****\*\*\*\***** GITHUB TUTORIAL ********\*\*\*\*********\*********\*\*\*\*********
+
+## 🔹 Push & Pull
+
+git push  
+→ Push to remote
+
+git push -u origin main  
+→ Push and set upstream
+
+git push --force  
+→ Force push (overwrite remote)
+
+git fetch  
+→ Download remote changes
+
+git pull  
+→ Fetch + Merge
+
+git pull --rebase  
+→ Fetch + Rebase
+
+---
+
+## 🔹 Cloning
+
+git clone repo_url  
+→ Clone repository
+
+---
+
+## 🔹 Tracking Branches
+
+git branch -vv  
+→ Show upstream tracking info
+
+---
+
+## 🔹 Conflict Resolution
+
+git status  
+→ Check conflict files
+
+After fixing conflicts:
+
+git add file_name  
+git commit
+
+---
+
+# 🚀 Advanced Useful Commands
+
+git cherry-pick commit_id  
+→ Apply specific commit
+
+git reflog  
+→ Show all reference history (life saver)
+
+git clean -fd  
+→ Remove untracked files and folders
+
+git blame file_name  
+→ See who changed each line
+
+git shortlog  
+→ Show contributors summary
