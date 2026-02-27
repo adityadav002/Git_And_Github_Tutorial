@@ -23,3 +23,7 @@ git branch
 git switch branch_name
 
 git switch -c branch_name
+
+git branch -d branch_name
+
+git merge branch_name
