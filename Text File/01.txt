@@ -1,1 +1,3 @@
-This is 1 txt
+This is a txt file, where we can write text, it could be any text.
+
+This a tutorial for git and github and I am learning now.

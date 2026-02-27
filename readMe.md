@@ -1,3 +1,5 @@
+************\************* git tutorial ********************\*********************
+
 git init
 
 git status
@@ -27,3 +29,11 @@ git switch -c branch_name
 git branch -d branch_name
 
 git merge branch_name
+
+git branch -m new_branch_name
+
+git branch -m old_name new_name
+
+git branch --merged
+
+git branch --no-merged
